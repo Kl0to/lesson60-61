@@ -334,14 +334,54 @@ if isPrime(n):
 
 Задачи
 
-1-
+3-function binary(x: Integer): String; 
 
-2-
+var R: String; 
 
-3-
+begin 
 
-4-
+if x mod 2 = 0 then R := '0' else R := '1';
 
-5-
+if x div 2 > 0 then R := R + binary(x div 2); 
 
-6-
+binary := R; 
+
+end;
+
+6-Рекурсивная: 
+
+#include <iostream>
+
+int gcd_recursive(int a, int b) 
+
+{
+
+  if (b == 0)
+    
+   return a;
+   
+   return gcd_recursive(b, a % b);
+   
+}
+
+Нерекурсивная:
+
+int gcd_iterative(int a, int b)
+
+{
+
+ while (b != 0)
+ 
+ {
+       
+   int temp = b;
+   
+   b = a % b;
+   
+   a = temp;
+   
+   }
+    
+  return a;
+  
+}

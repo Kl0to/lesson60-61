@@ -15,31 +15,300 @@
 
 Задачи
 
-1-
+1-if (a > b):
 
-2-
+ m = a
+ 
+else:
 
-3-
+ m = b
+ 
+if c > m:
 
-4-
+ m = c
 
-5-
+2-float f(float a,b,c)
 
-6-
+{
 
-7-
+if (a>b)
 
-8-
+ if (a>c)
+ 
+ return a;
+ 
+ else return b;
+ 
+else if (b>c)
 
-9-
+return b;
 
-10-
+ else return c;
+ 
+ }
 
-11-
+3-function DigitCount(n:Cardinal):integer;
 
-12-
+begin
+DigitCount:=Trunc(ln(n)/ln(10))+1;
 
-13-
+end;
+
+4-import mathval1 = int(input("клавиатура:"))
+
+val2 = int(input("клавиатура:"))
+
+print("НОК:"math.lcm(val1,val2))
+
+print("НОД",math.gcd(val1,val2))
+
+5-def lcm(a,b): m = a*b
+
+ while a != 0 and b != 0: if a > b:
+ 
+ a %= b else:
+ 
+ b %= a return m // (a+b)
+ 
+while 1:
+
+ try: x = int(input('a='))
+ 
+ y = int(input('b=')) print('НОК:',lcm(x,y))
+ 
+ except: break
+
+6-int revNum(int n)
+
+{
+
+   int a=0;
+    
+  while(n)
+    
+  {
+  
+   a=a*10+n%10;
+        
+  n=n/10;
+  
+  }
+  
+  return a;
+  
+}
+
+7-#include <iostream>
+ 
+using namespace std;
+ 
+    
+int main()
+{
+    int arr[11] = {0};
+ 
+ 
+   for(int i=0;i<36000;++i)
+        ++arr[rand()%6 + rand()%6];
+    
+    
+ 
+   for(int i=0;i<11;++i)
+        cout<<arr[i]<<"   ";
+    cout<<endl;
+ 
+   system("PAUSE");
+    return 0;
+}
+
+8-def factorial(n):
+
+  res = 1
+    
+  for i in range(1,n+1):
+    
+  res*=i
+        
+  return res
+ 
+n = None
+
+while type(n) != int:
+
+  try:
+    
+  n = int(input('N = '))
+        
+   print(factorial(n))
+        
+  except:
+    
+  print('Введено не число, либо не целое число! Попробуйте ещё раз')
+
+
+9-#include <iostream>
+ 
+using namespace std;
+ 
+int f(int n)
+
+{
+
+  int a = 0;
+    
+  int b = 1;
+    
+  for (int i = 0; i < n; i++)
+    
+  {
+    
+   a = a + b;
+        
+  b = a - b;
+        
+  }
+  
+return a;
+
+}
+ 
+int main()
+
+{
+
+  int n;
+  
+   cin >> n;
+   
+  cout << f(n) << "\n";
+  
+   system("pause");
+   
+  return 0;
+  
+}
+
+
+10-max_number = 10000
+ 
+
+def summa(n):
+
+  сумма = 0
+    
+  for k in range(1, n//2+1):
+  
+  if n%k == 0:
+    
+  сумма += k
+       
+  return сумма
+ 
+
+lst = [0, 1]
+
+for m in range(2, max_number+1):
+
+  1st.append(summa(m))
+ 
+
+for i in range(2, max_number+1):
+
+  for j in range(i+1, max_number+1):
+    
+  if i == lst[j] and j == lst[i]:
+        
+  print(i, j)
+
+
+11-[i for i in range(N+1) if sum_gidits(i)==sum_digits(i*2)]
+
+12-def is_perf(n):
+
+  s=1
+    
+  for i in range(2,n//2):
+    
+  if i*i>n : break
+        
+  if n%i==0 :
+        
+   s+=i
+            
+  s+=n//i
+            
+return s==n
+    
+a=int(input())
+
+b=int(input())
+ 
+for x in range(a,b+1):
+
+  if is_perf(x) : print(x)
+
+
+13-def isPrime(n):
+
+  if (n<=2):
+    
+   return True
+        
+if n%2==0:
+    
+  return False
+        
+else:
+    
+  k=3
+        
+  while(k<n//2):
+        
+   if (n%k)==0:
+            
+   return False
+                
+   k+=2
+            
+   return True
+        
+def isHyperPrime(n):
+
+ if not isPrime(n):
+         
+  return False
+        
+ else:
+    
+   while(True):
+        
+   if (n==0):
+            
+  break
+                
+   n=n//10
+            
+  if not isPrime(n):
+            
+   return False
+                
+  return True
+        
+n=int(input())
+
+if isHyperPrime(n):
+
+print("Число гиперпростое")
+
+else:
+
+if isPrime(n):
+    
+   print("Число простое, но не гиперпростое")
+        
+  else:
+  
+ print("Число составное")
 
 #61
 
